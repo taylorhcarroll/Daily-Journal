@@ -1,8 +1,8 @@
-* {
+/* * {
     
     border: red 1px dotted;
 
-}
+} */
 
 body {
     background-image: linear-gradient(teal, antiquewhite, white);
@@ -27,14 +27,14 @@ header a:visited {
 header h1 {
     flex: 4;
     color: coral;  
-
-
+}
 .header__nav {
     justify-content: flex-end;
     align-items: center;
-    /* margin: auto; */
-    flex: 1;
-}
+    margin: auto; 
+    flex: 1; 
+} 
+
 
 .header__nav a {
     color: coral;
@@ -84,4 +84,15 @@ color: rgba(9, 63, 154, 1);
 color: rgba(6, 114, 191, 1);
 color: rgba(245, 134, 52, 1);
 color: rgba(221, 211, 222, 1);
+}
+
+.jContainer {
+    background: coral;
+    border-radius: 5px;
+}
+
+.entryLog {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
 }

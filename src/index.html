@@ -8,7 +8,7 @@
    <title>Document</title>
 </head>
 <body>
-   <script src=/script/main.js></script>
+   
    <header>
          <h1>
          <a href="#" rel="history">Taylor'd Thoughts</a>
@@ -25,10 +25,12 @@
       </h2>
       <span> Let’s work together. (•̀ᴗ•́)و </span>
    </div>
+   <!-- The journal entry form -->
    <div class="journalWrapper">
       <div class="journalEntry">
          <h3>Journal Entry</h3>
          <form action="">
+            <article class="entryLog">
             <fieldset>
                <label for="journalDate">Date of entry</label>
                <input type="date" name="journalDate" id="journalDate" required>
@@ -71,10 +73,13 @@
             </fieldset>
             <button class="button" type="button">Submit</button>
       </div>
+      <!-- END journal form -->
    </div>
+   </article>
    </form>
    <footer>
         
    </footer>
+   <script src=/script/journal.js></script>
 </body>
 </html> 
