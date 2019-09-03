@@ -1,11 +1,24 @@
+console.log("If you can see this your data JS file is properly linked.")
 
 //function to push input to database.json//
 const API = {
-    getJournalEntries () {
-        return fetch("http://localhost:3000/entries")
-            .then(response => response.json())
+    getJournalEntries: function() {
+        return fetch("http://localhost:8088/journalArray").then(response => 
+            response.json()
+        );
+    },
+    saveJournalEntry: function(entry) {
+        return fetch("http://localhost:8088/journalArray", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(entry)
+        });
     }
+};
 
+// export default API;
 
 // fetch("http://localhost:3000/journalArray") // Fetch from the API
 //     .then(response => response.json())  // Parse as JSON

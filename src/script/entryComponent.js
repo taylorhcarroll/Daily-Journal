@@ -1,8 +1,14 @@
-document.querySelector(".button1").addEventListener("click", event => {
-    let dateInput = document.querySelector("#journalDate").value;
-    let dateInput = document.querySelector("#mood").value;
-    let dateInput = document.querySelector("#concepts").value;
-    let dateInput = document.querySelector("#entry").value;
-    console.log(dateInput, moodInput, conceptsInput, entryInput);
+//create html representation of journal entry
+const webComponent = {
+    entryHTML: function(item) {
+        return `
+    <div class="jContainer">
+    <h5><span>Date: ${item.date} </span> <span> Mood: ${item.mood} </span></h5>
+    <p class="concept">Concepts Covered  ${item.concept} </p>
+    <p>${item.content}</p>
+    <div>
+    `;
+}
+};
 
-});
+// export default webComponent;

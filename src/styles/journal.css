@@ -52,9 +52,9 @@ header h1 {
     flex-flow: wrap row;
 }
 
-.journalEntry {
-    /* align-content: flex-end; */
-}
+/* .journalEntry {
+    /* align-content: flex-end; }*/
+
 
 /*this is to float the titles on top of the fields*/
 fieldset {

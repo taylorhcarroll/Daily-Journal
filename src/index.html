@@ -2,8 +2,8 @@
 <html lang=en>
 <head>
    <meta charset=UTF-8>
-   <meta name=viewport content=width=, initial-scale=1.0>
-   <meta http-equiv=X-UA-Compatible content=ie=edge>
+   <meta name="viewport" content="width=device-width initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <link rel=stylesheet href=styles/journal.css>
    <title>Document</title>
 </head>
@@ -30,22 +30,22 @@
       <div class="journalEntry">
          <h3>Journal Entry</h3>
          <form action="">
-            <article class="entryLog">
+            <article>
             <fieldset>
                <label for="journalDate">Date of entry</label>
-               <input type="date" name="journalDate" id="journalDate" required>
+               <input type="date" name="journalDate" id="date" required>
             </fieldset>
             <fieldset>
                   <label for="conceptsCovered">Concepts Covered</label>
-                  <input type="text" name="conceptsCovered" id="conceptsCovered" required>
+                  <input type="text" name="conceptsCovered" id="concept" required>
             </fieldset>
             <fieldset>
                   <label for="journalEntry">Journal Entry</label>
-                  <textarea type="text" name="journalEntry" id="journalEntry" required> </textarea>
+                  <textarea type="text" name="journalEntry" id="content" required> </textarea>
             </fieldset>
             <fieldset>
                   <label for="journalMood">Mood for the day</label>
-                  <select type="text" name="journalMood" id="journalMood">
+                  <select type="text" name="journalMood" id="mood">
                               <option value="JOY">JOY</option>
                               <option value="FEAR">FEAR</option>
                               <option value="ANGER">ANGER</option>
@@ -74,12 +74,17 @@
             <button class="button" type="button">Submit</button>
       </div>
       <!-- END journal form -->
+      <article class="entryLog"></article>
    </div>
    </article>
    </form>
    <footer>
         
    </footer>
+   <script src=/script/entriesDOM.js></script>
+   <script src=/script/entryComponent.js></script>
+   <script src=/script/data.js></script>
+   <script src=/script/events.js></script>
    <script src=/script/journal.js></script>
 </body>
 </html> 

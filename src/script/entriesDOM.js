@@ -1,25 +1,24 @@
-//this links the entry log div to now = the journal container
-const journalContainer = document.querySelector(".entryLog");
-
-// const makeJournalEntryComponent = (journalEntry) => {
-//     // Create your own HTML structure for a journal entry
-//     return `
-//     <div class="student">
-//     <h1 class="xx-large failing">${journalEntry.concept}</h1>
-//     <section class="bordered dashed section--padded">${journalEntry.date}</section>
-//     <aside class="pushRight">${journalEntry.mood}</aside>
-// </div> `
-// }
+console.log("If you can see this your entriesDOM JS file is properly linked.")
 
 
-function addToDom(entries) {
+// import webComponent from "/src/scripts/entryComponent.js";
+
+const injectDOM = {
+
+    addToDom:(entries) => {
+        console.log("add to dom called")
     entries.forEach(item => {
-        let jContent = `
-            <div class="jContainer">
-                <h5>${item.date} Feeling: ${item.mood}</h5>
-                <h5>${item.concept}</h5>
-                <p>${item.content}</p>
-            </div>
-        `;
-            journalContainer.innerHTML += jContent;
-    })};
+        console.log(item)
+        //this links the entry log div to now = the journal container
+        const journalContainer = document.querySelector(".entryLog");
+        journalContainer.innerHTML += webComponent.entryHTML(item);   
+        })
+    }, 
+    //inject
+    addEntToDom: function(entry) {
+    const journalContainer = document.querySelector(".entryLog");
+    journalContainer.innerHTML += 
+        webComponent.entryHTML(entry)
+},
+
+}
